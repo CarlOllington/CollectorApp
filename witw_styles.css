@@ -1,0 +1,60 @@
+
+/* Flexbox Gallery */
+.gallery
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flexbox Card */
+.box
+{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 310px;
+    width: 310px;
+    margin: 10px;
+}
+
+/* Styling to hide primary image and show secondary image on hover of primary image */
+.shirt:hover
+{
+    text-decoration: none;
+}
+.shirt:hover img:first-child
+{
+    display: none;
+}
+.shirt:hover img:last-child
+{
+    display: inline-block;
+}
+
+/* Primary image displaying front of the shirt */
+.shirt_front
+{
+    height: 270px;
+    width: 270px;
+    border-radius: 10%;
+}
+
+/* Secondary image that displays the back of the shirt */
+.shirt_back
+{
+    display: none;
+    height: 270px;
+    width: 270px;
+    border-radius: 10%;
+}
+
+.summary
+{
+    height: 30px;
+    width: 310px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
