@@ -23,7 +23,7 @@ Midnight Shadow (Blue): #555e6e.
 /* spaces and styles footer section */
 .footer
 {
-   display: flex;
+    display: flex;
     justify-content: space-between;
     color: #6d6e6c;
 }
