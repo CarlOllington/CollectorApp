@@ -12,7 +12,7 @@
 </header>
 
 
-<div class="content" id = home>
+<div class="content" id=home>
 <?php
 
 require_once("db.php");
@@ -52,7 +52,7 @@ $results = $query->fetchAll();
 
 ?>
 </div>
-<footer class = footer>
+<footer class=footer>
     <span>Website Design & Build by Carl Ollington</span>
         <a class="btt" href="index.php">Back To Top &#x21EA;</a>
 </footer>
