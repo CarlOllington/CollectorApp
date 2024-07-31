@@ -1,0 +1,114 @@
+/*
+Colour Palette:
+Piano Black: #171b1b
+Incense (tan): #ad967d
+Masala (brown): #59534c
+Metropolitan Silhouette (Green): #3d4744
+Shadows (Grey): #6d6e6c
+Midnight Shadow (Blue): #555e6e.
+*/
+
+.page
+{
+    background-color: #171b1b;
+    color: white;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+}
+
+/* spaces and styles footer section */
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    color: #6d6e6c;
+}
+.btt
+{
+    font-size: 25px;
+    justify-content: right;
+    color: white;
+    text-decoration: none;
+}
+
+/* Flexbox Gallery */
+.gallery
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+/* Flexbox Card */
+.box
+{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    height: 310px;
+    width: 310px;
+    margin: 10px;
+}
+
+/* Styling to hide primary image and show secondary image on hover of primary image */
+.shirt:hover
+{
+    text-decoration: none;
+}
+.shirt:hover img:first-child
+{
+    display: none;
+}
+.shirt:hover img:last-child
+{
+    display: inline-block;
+}
+
+/* Primary image displaying front of the shirt */
+.shirt_front
+{
+    height: 270px;
+    width: 270px;
+    border-radius: 10%;
+}
+
+/* Secondary image that displays the back of the shirt */
+.shirt_back
+{
+    display: none;
+    height: 270px;
+    width: 270px;
+    border-radius: 10%;
+}
+
+/* Spaces data summary in a more aesthetic manner*/
+.summary
+{
+    height: 30px;
+    width: 310px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* Add injection of colour into the data summary*/
+.country
+{
+    color: #ad967d;
+}
+
+.team
+{
+    color: #6d6e6c;
+}
+
+.year
+{
+    color:#555e6e ;
+}
