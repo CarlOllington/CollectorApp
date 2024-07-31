@@ -2,17 +2,20 @@
 <html lang="en">
 
 <header>
-    <link href="witw_styles.css" rel="stylesheet">
+
 </header>
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Where in the World?</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="witw_styles.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar">
+<body class="page">
+<header class="header">
+    <h1>Where in the World!?</h1>
+</header>
 
-</nav>
-<div class="main_page" id = home>
+
+<div class="content" id = home>
 <?php
 
 // Establish connection to database
@@ -45,11 +48,11 @@ function visualise_data($results)
         echo "<img src = '$shirt_back' alt= '$country $team Shirt Back' class= shirt_back>";
         echo "</a>";
         echo "<div class = summary>";
-        echo "<p>$country</p>";
+        echo "<p class = 'country'>$country</p>";
         echo "<p>|</p>";
-        echo "<p>$team</p>";
+        echo "<p class = 'team'>$team</p>";
         echo "<p>|</p>";
-        echo "<p>$year_collected</p>";
+        echo "<p class = 'year'>$year_collected</p>";
         echo "</article>";
     }
     echo "</section>";
@@ -59,7 +62,8 @@ visualise_data($results);
 ?>
 </div>
 <footer class = footer>
+    <span>Website Design & Build by Carl Ollington</span>
+        <a class="btt" href="index.php">Back To Top &#x21EA;</a>
 </footer>
 </body>
-
 </html>
