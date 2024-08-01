@@ -52,6 +52,7 @@ $results = $query->fetchAll();
     echo "</section>";
 
 ?>
+</div>
 
 <footer class=footer>
     <span>Website Design & Build by Carl Ollington</span>
