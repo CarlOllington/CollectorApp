@@ -6,11 +6,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="witw_styles.css" rel="stylesheet">
 </head>
+
 <body class="page">
+
 <header class="header">
     <h1>Where in the World!?</h1>
 </header>
-
 
 <div class="content" id=home>
 <?php
@@ -52,9 +53,12 @@ $results = $query->fetchAll();
 
 ?>
 </div>
+
 <footer class=footer>
     <span>Website Design & Build by Carl Ollington</span>
+    <a class="btt" href="input_form.php">Add a Shirt &#x1F455;</a>
         <a class="btt" href="index.php">Back To Top &#x21EA;</a>
 </footer>
+
 </body>
 </html>

@@ -14,7 +14,7 @@ Midnight Shadow (Blue): #555e6e.
     color: white;
 }
 
-.header
+header
 {
     display: flex;
     justify-content: center;
@@ -24,15 +24,17 @@ Midnight Shadow (Blue): #555e6e.
 .footer
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     color: #6d6e6c;
+    margin-top: auto;
 }
+
 .btt
 {
-    font-size: 25px;
-    justify-content: right;
     color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 /* Flexbox Gallery */
@@ -61,10 +63,12 @@ Midnight Shadow (Blue): #555e6e.
 {
     text-decoration: none;
 }
+
 .shirt:hover img:first-child
 {
     display: none;
 }
+
 .shirt:hover img:last-child
 {
     display: inline-block;
@@ -111,4 +115,44 @@ Midnight Shadow (Blue): #555e6e.
 .year
 {
     color:#555e6e ;
+}
+
+/* Input Form Styling */
+.page_input_form
+{
+    background-color: #171b1b;
+    color: whitesmoke;
+    font-family: "Roboto Thin", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.form_section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.form_shirt_front
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_shirt_back
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
