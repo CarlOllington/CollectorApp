@@ -52,10 +52,10 @@ $results = $query->fetchAll();
     echo "</section>";
 
 ?>
-</div>
 
 <footer class=footer>
     <span>Website Design & Build by Carl Ollington</span>
+    <a class="btt" href="input_form.php">Add a Shirt &#x1F455;</a>
         <a class="btt" href="index.php">Back To Top &#x21EA;</a>
 </footer>
 
