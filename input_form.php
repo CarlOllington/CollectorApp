@@ -15,25 +15,25 @@
 
 <section>
     <div class="form_section">
-            <form method="post" class="input_form">
+            <form method="post" class="input_form" enctype="multipart/form-data">
                 <div class="form_shirt_front">
-                    <input type="file" id="shirt_front" name="shirt_front" accept="image/*" alt="Front of Shirt Image Upload" placeholder="" required><br>
-                    <label for="shirt_front">Front of Shirt Image Upload</label>
+                    <input type="text" id="shirt_front" name="shirt_front" required>
+                    <label for="shirt_front">Front of Shirt Image URL</label>
                 </div>
                 <br>
                 <div class="form_shirt_back">
-                    <input type="file" id="shirt_back" name="shirt_back" accept="image/*" alt="Back of Shirt Image Upload" required><br>
-                    <label for="shirt_back">Back of Shirt Image Upload</label>
+                    <input type="text" id="shirt_back" name="shirt_back" required>
+                    <label for="shirt_back">Back of Shirt Image URL</label>
                 </div>
                 <br>
                 <div class="form_country">
-                    <label for="country_input">Country:</label><br>
-                    <input id="country_input" name="country_input" alt="Country Input" placeholder="i.e. Spain" required>
+                    <label for="country_input" class="country_label">Country:</label><br>
+                    <input type="text" id="country_input" name="country_input" alt="Country Input" placeholder="i.e. Spain" required>
                 </div>
                 <br>
                 <div class="form_team">
                     <label for="team_input">Team:</label><br>
-                    <input type="text" id="team_input" name="team_input" alt="Team Input" placeholder="i.e. National Team">
+                    <input type="text" id="team_input" name="team_input" alt="Team Input" placeholder="i.e. National Team" required>
                 </div>
                 <br>
                 <div class="form_year_collected">
@@ -41,30 +41,52 @@
                     <input type="number" id="year_input" name="year_input" alt="Year Input" placeholder="i.e. 2024" required>
                 </div>
                 <br>
-                <button type="submit">Add to Collection</button>
+                <input type="submit" name="submit" value="Add to Collection">
             </form>
-    </div>
-</section>
+
 <?php
-function form_submission()
+
+require_once("db.php");
+
+$shirt_front = null;
+$shirt_back = null;
+$country_input = null;
+$team_input = null;
+$year_input = null;
+
+if (isset($_POST['shirt_front']) && isset($_POST['shirt_back']) && isset($_POST['country_input']) && isset($_POST['team_input']) && isset($_POST['year_input']))
 {
-if (isset($_POST))
-{
-$submitted_data = $_POST;
+    if ($_POST['shirt_front'] != null && $_POST['shirt_back'] != null && $_POST['country_input'] != null && $_POST['year_input'] != null)
+    {
+    $shirt_front = $_POST['shirt_front'];
+    $shirt_back = $_POST['shirt_back'];
+    $country = trim($_POST['country_input']);
+    $team = trim($_POST['team_input']);
+    $year = trim($_POST['year_input']);
+    }
 }
 else
 {
-    echo "Please fill all the required fields.";
-    echo "<br>";
-    echo "Please add a JPEG or PNG Image file.";
+    echo "<br>Please fill all the required fields.";
 }
-return $submitted_data;
+if ($shirt_front !== null && $shirt_back !== null && $country !== null && $team !== null && $year !== null)
+{
+    $query = $db->prepare("INSERT INTO `shirts` (`shirt_front`,`shirt_back`,`country`,`team`,`year_collected`) VALUES (:SF, :SB, :country, :team, :year)");
+
+    $query->bindparam(":SF", $shirt_front);
+    $query->bindparam(":SB", $shirt_back);
+    $query->bindparam(":country", $country);
+    $query->bindparam(":team", $team);
+    $query->bindparam(":year", $year);
+
+    $query->execute();
 }
-form_submission();
-$submitted_data = form_submission();
 
 ?>
+    </div>
+</section>
 <br>
+
 <footer class=footer>
     <span>Website Design & Build by Carl Ollington</span>
     <a class="btt" href="index.php">Back to Gallery &#x1F455;</a>
