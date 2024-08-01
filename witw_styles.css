@@ -14,7 +14,7 @@ Midnight Shadow (Blue): #555e6e.
     color: white;
 }
 
-.header
+header
 {
     display: flex;
     justify-content: center;
@@ -28,6 +28,7 @@ Midnight Shadow (Blue): #555e6e.
     color: #6d6e6c;
     margin-top: auto;
 }
+
 .btt
 {
     color: white;
@@ -62,10 +63,12 @@ Midnight Shadow (Blue): #555e6e.
 {
     text-decoration: none;
 }
+
 .shirt:hover img:first-child
 {
     display: none;
 }
+
 .shirt:hover img:last-child
 {
     display: inline-block;

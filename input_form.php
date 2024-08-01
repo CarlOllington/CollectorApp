@@ -9,7 +9,7 @@
 
 <body class="page_input_form">
 
-<header class="header">
+<header>
     <h1>Let's add a shirt!</h1>
 </header>
 
